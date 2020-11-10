@@ -7,12 +7,12 @@ import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
+import io.reactivex.Maybe;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.Optional;
 
 @Controller("/persons")
 public class PersonController {
@@ -29,7 +29,7 @@ public class PersonController {
     }
 
     @Get(uri="/{id}", produces = MediaType.APPLICATION_JSON)
-    public Optional<Person> findById(Integer id) {
+    public Maybe<Person> findById(Integer id) {
         LOGGER.info("Person find: id={}", id);
         return service.findById(id);
     }
