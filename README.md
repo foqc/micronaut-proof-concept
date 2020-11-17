@@ -1,6 +1,4 @@
-# Micronaut Proof of Concept
+## Feature http-client documentation
 
-This project is made with the intention of making a review on the micronaut framework.
-
-The sample application performance will be tested on JDK 11.
+- [Micronaut Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
